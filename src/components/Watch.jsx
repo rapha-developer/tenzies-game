@@ -6,8 +6,10 @@ function Watch(props) {
     const [isRunning, setIsRunning] = useState(false)
     const [clock, setClock] = useState("00:00")
 
-    const bestTimeFromStorage = JSON.parse(localStorage.getItem("best_time")) 
-    const [bestTime, setBestTime] = useState( bestTimeFromStorage || "99:00");
+    const bestTimeFromStorage = JSON.parse(localStorage.getItem("best_time")) ?
+        JSON.parse(localStorage.getItem("best_time")) : "99:00"
+
+    const [bestTime, setBestTime] = useState(bestTimeFromStorage);
 
     useEffect(() => { 
         if(isRunning) {
@@ -47,8 +49,8 @@ function Watch(props) {
             const bestTime__seconds = parseInt(bestTime.substring(3, 5));
 
             if ( winGame &&
-                (bestTime__minutes > minutes ) || 
-                (bestTime__minutes == minutes && bestTime__seconds > seconds) ) {
+                ( (bestTime__minutes > minutes ) || 
+                ( bestTime__minutes == minutes && bestTime__seconds > seconds ) ) ) {
                     localStorage.setItem("best_time", JSON.stringify(clock));
                 }
         }
@@ -62,8 +64,8 @@ function Watch(props) {
 
     return (
         <div className="watch">
-            <div class="watch__time" id="timer">Your time: {clock}</div>
-            <div class="watch__time" id="timer">Best time: {bestTime}</div>
+            <div className="watch__time" id="timer">Your time: {clock}</div>
+            <div className="watch__time" id="timer">Best time: {bestTime}</div>
         </div>
     )
 }
