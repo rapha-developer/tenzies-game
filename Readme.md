@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://github.com/rapha-developer/readme-ui/blob/main/templates/name.svg" alt="Tenzies Game" height="200" width="800">
+  <img src="https://svgur.com/i/eoD.svg" alt="Tenzies Game" height="200" width="800">
   <br>
 </h1>
 <p align="center">Tenzies game aims to roll the dice randomly until they have the same number.</p>
@@ -74,11 +74,11 @@ Tenzies Game é um jogo que vai divertir você do começo ao fim. :joystick::slo
 ***
 > ###### 1.1 Clone this repository (Clone este repositório) 
 >```bash
->   git clone https://link-to-project
+>   git clone https://github.com/rapha-developer/tenzies-game.git
 > ```
 > ###### 1.2 Go to the project directory (Vá para o diretório do projeto) 
 >```bash
->  cd my-project
+>  cd tenzies-game
 > ```
 
 <br />
